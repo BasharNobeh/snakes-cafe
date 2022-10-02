@@ -9,7 +9,7 @@ if __name__ == "__main__" :
     **************************************
     **    Welcome to the Snakes Cafe!   **
     **    Please see our menu below.    **
-    **
+    **                                  **
     ** To quit at any time, type "quit" **
     **************************************
 
@@ -32,7 +32,7 @@ if __name__ == "__main__" :
     Cake
     Pie
 
-    Drinks
+    Beverages
     ------
     Coffee
     Tea
@@ -76,9 +76,10 @@ if __name__ == "__main__" :
 
         else :
             print(f"****************\nCould not find {order} :( \nWe will do our best to provide it next time <3\nHave a nice day.\nYou can now continue ordering from our menu\n****************")
-            print("# Things you ordered till now :  ")
-            for meal in user_order:
-                print(user_order[meal] , meal)        
+            if len(user_order) != 0:
+                print("# Things you ordered till now :  ")
+                for meal in user_order:
+                    print(user_order[meal] , meal)        
 
 
 
