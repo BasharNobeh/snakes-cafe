@@ -42,7 +42,7 @@ Unicorn Tears
 ***********************************
 '''
 user_order = {}
-order_list = []
+
 print(MENU)
 while True : 
     order = input("> ")
@@ -50,13 +50,14 @@ while True :
         user_order[order] = user_order.get(order,0)+1
 
              
-
+        print("** " , end = "")
         for meal in user_order:
+           
             if user_order[meal] == 1:
                 print(f"1 order of {meal} ", end="")
             elif user_order[meal] > 1:  
                 print(f"{user_order[meal]} orders of {meal} ", end="")  
-        print("Has been added to your meal")
+        print("Has been added to your meal **")
 
            
       
@@ -68,13 +69,11 @@ while True :
         break
     
     else :
-        print(f"Could not find {order} :( \nWe will do our best to provide it next time <3\nHave a nice day.\nYou can now continue ordering from our menu")
+        print(f"****************\nCould not find {order} :( \nWe will do our best to provide it next time <3\nHave a nice day.\nYou can now continue ordering from our menu\n****************")
         print("# Things you ordered till now :  ")
         for meal in user_order:
             print(user_order[meal] , meal)        
 
-
-# for item in order:
 
 
 
